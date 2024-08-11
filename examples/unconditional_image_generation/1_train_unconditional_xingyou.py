@@ -85,7 +85,7 @@ def parse_args():
         ##xingyou
         "--train_data_dir",
         type=str,
-        default='/workspace/train/hand',
+        default='/workspace/xingyou_huggingface_diffusers/examples/unconditional_image_generation/train/hand',
         help=(
             "A folder containing the training data. Folder contents must follow the structure described in"
             " https://huggingface.co/docs/datasets/image_dataset#imagefolder. In particular, a `metadata.jsonl` file"
@@ -98,7 +98,7 @@ def parse_args():
         ## It was "ddpm-model-64", changed to this, and ddpm-ema-flowers-64 for test online dataset
         ## hand_out is custom output
         # default="ddpm-ema-flowers-64",
-        default="hand_out",
+        default="/workspace/xingyou_huggingface_diffusers/examples/unconditional_image_generation/hand_out",
         help="The output directory where the model predictions and checkpoints will be written.",
     )
     parser.add_argument("--overwrite_output_dir", action="store_true")
@@ -154,7 +154,7 @@ def parse_args():
     ##xingyou
     parser.add_argument("--save_images_epochs", type=int, default=1, help="How often to save images during training.")
     parser.add_argument(
-        "--save_model_epochs", type=int, default=10, help="How often to save the model during training."
+        "--save_model_epochs", type=int, default=1, help="How often to save the model during training."
     )
     parser.add_argument(
         "--gradient_accumulation_steps",
