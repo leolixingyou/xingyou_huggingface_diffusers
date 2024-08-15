@@ -171,6 +171,9 @@ tags
 # dependencies
 /transformers
 
+# results .png from runs
+.png
+
 # ruff
 .ruff_cache
 

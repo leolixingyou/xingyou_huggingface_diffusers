@@ -9,8 +9,6 @@ def mkdir(dir):
         os.makedirs(dir,exist_ok=True)
 
 ### batch num is setting in pipline_ddpm.py
-mode_list = ['single_epoch_n','each_epoch_batch']
-mode = mode_list[0]
 foldor = [x for x in os.listdir('./xingyou_huggingface_diffusers/examples/unconditional_image_generation/hand_out_2024_08_07') if 'check' in x]
 save_dir = f"/workspace/xingyou_huggingface_diffusers/examples/unconditional_image_generation/runs/{time.strftime('%Y_%m_%d_%H_%M', time.localtime(time.time()))}/"
 mkdir(save_dir)
